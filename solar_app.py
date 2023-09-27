@@ -154,6 +154,10 @@ def main():
         # Calculator
         solar_calculator(data)
 
+        # expander with full json
+        with st.expander("Click to unfold the full JSON response", expanded=False):
+            st.write(data)
+
 if __name__ == '__main__':
     if check_password():
         main()
