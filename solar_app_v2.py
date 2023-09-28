@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 import math
 
 
-BING_KEY = st.secrets.BING_KEY
+# BING_KEY = st.secrets.BING_KEY
 GOOGLE_SOLAR_KEY = st.secrets.GOOGLE_SOLAR_KEY
 SOLAR_INSIGHTS_ENDPOINT = 'https://solar.googleapis.com/v1/buildingInsights:findClosest?location.latitude={}&location.longitude={}&requiredQuality=LOW&key={}'
 
