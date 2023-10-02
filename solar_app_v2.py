@@ -320,6 +320,7 @@ def main():
         if st.button('Get Insights'):
             lat, lng = get_lat_lng(address)
             data = get_solar_insights(lat, lng)
+            print(data)
             st.session_state.data = data
             st.session_state.address = address
 
