@@ -330,7 +330,10 @@ def main():
 
         # Display the image of the house
         image = get_google_maps_image(lat, lng)
-        st.image(image, caption=f"House Image from {data['imageryDate']['year']}-{data['imageryDate']['month']}-{data['imageryDate']['day']}", use_column_width=True)
+        if 'imageryDate' in data:
+            st.image(image, caption=f"House Image from {data['imageryDate']['year']}-{data['imageryDate']['month']}-{data['imageryDate']['day']}", use_column_width=True)
+        else:
+            st.image(image, caption="House Image", use_column_width=True)
 
         # Display solar data
         st.subheader('Solar Potential')
